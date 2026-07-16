@@ -1,1 +1,617 @@
+/* =========================
+   RESET
+========================= */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#f8faf7;
+    color:#2d3a2d;
+    line-height:1.6;
+
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.18),
+    rgba(255,255,255,.25)
+    ),
+    url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:80px 30px;
+
+}
+
+.hero-overlay{
+
+    width:100%;
+    max-width:1200px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.hero-text{
+
+    flex:1;
+    color:white;
+
+}
+
+.hero-text h1{
+
+    font-family:'Playfair Display',serif;
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:25px;
+
+}
+
+.hero-text span{
+
+    color:#d7ffd2;
+    font-style:italic;
+
+}
+
+.divider{
+
+    width:100px;
+    height:3px;
+    background:white;
+    margin-bottom:25px;
+
+}
+
+.hero-text p{
+
+    font-size:1.25rem;
+    max-width:520px;
+
+}
+
+/* =========================
+   SIGNUP CARD
+========================= */
+
+.signup-card{
+
+    width:420px;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.mail-icon{
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.signup-card h2{
+
+    text-align:center;
+
+    color:#28513d;
+
+    margin-bottom:10px;
+
+    font-size:2rem;
+
+}
+
+.signup-description{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+.signup-card form{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.signup-card input{
+
+    padding:16px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+.signup-card input:focus{
+
+    outline:none;
+
+    border-color:#2f6d4d;
+
+    box-shadow:
+    0 0 8px rgba(47,109,77,.25);
+
+}
+
+.signup-card button{
+
+    margin-top:10px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2f6d4d;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.signup-card button:hover{
+
+    background:#3d8660;
+
+    transform:translateY(-2px);
+
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits{
+
+    max-width:1200px;
+
+    margin:120px auto;
+
+    padding:0 30px;
+
+    text-align:center;
+
+}
+
+.benefits h2{
+
+    font-family:'Playfair Display',serif;
+
+    color:#2f6d4d;
+
+    font-size:2.6rem;
+
+    margin-bottom:60px;
+
+}
+
+.benefit-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:50px;
+
+}
+
+.benefit{
+
+    padding:30px;
+
+}
+
+.icon{
+
+    font-size:54px;
+
+    margin-bottom:20px;
+
+}
+
+.benefit h3{
+
+    margin-bottom:15px;
+
+    color:#28513d;
+
+}
+
+.benefit p{
+
+    color:#666;
+
+}
+
+/* =========================
+   MISSION SECTION
+========================= */
+
+.mission-section{
+
+    max-width:1200px;
+
+    margin:100px auto;
+
+    padding:0 30px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.map-side{
+
+    text-align:center;
+
+}
+
+.map-side img{
+
+    max-width:340px;
+
+    margin:auto;
+
+}
+
+.map-side h3{
+
+    margin-top:25px;
+
+    font-size:1.5rem;
+
+    color:#28513d;
+
+}
+
+.map-side span{
+
+    font-size:.9rem;
+
+    color:#666;
+
+}
+
+.quote-side{
+
+    position:relative;
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+}
+
+blockquote{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:2rem;
+
+    color:#333;
+
+    margin-bottom:25px;
+
+}
+
+.quote-side p{
+
+    color:#2f6d4d;
+
+    font-weight:600;
+
+}
+
+.sakura{
+
+    position:absolute;
+
+    width:140px;
+
+    right:-30px;
+
+    bottom:-30px;
+
+}
+
+/* =========================
+   THANK YOU
+========================= */
+
+.thank-you{
+
+    padding:120px 30px;
+
+    text-align:center;
+
+    background:#eef5ef;
+
+}
+
+.thank-you h2{
+
+    font-size:3rem;
+
+    color:#2f6d4d;
+
+    margin-bottom:10px;
+
+}
+
+.thank-you h3{
+
+    font-weight:500;
+
+    margin-bottom:25px;
+
+}
+
+.thank-you p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#666;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#2f6d4d;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.signup-card{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.hero-text{
+
+    animation:fadeLeft 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:950px){
+
+.hero-overlay{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-text{
+
+    order:1;
+
+}
+
+.signup-card{
+
+    order:2;
+
+    width:100%;
+    max-width:450px;
+
+}
+
+.hero-text h1{
+
+    font-size:3rem;
+
+}
+
+.hero-text p{
+
+    margin:auto;
+
+}
+
+.divider{
+
+    margin:20px auto;
+
+}
+
+.benefit-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.mission-section{
+
+    grid-template-columns:1fr;
+
+}
+
+.quote-side{
+
+    padding:40px;
+
+}
+
+blockquote{
+
+    font-size:1.5rem;
+
+}
+
+.sakura{
+
+    display:none;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+
+    padding:40px 20px;
+
+}
+
+.hero-text h1{
+
+    font-size:2.3rem;
+
+}
+
+.signup-card{
+
+    padding:30px;
+
+}
+
+.benefits{
+
+    margin:70px auto;
+
+}
+
+.thank-you{
+
+    padding:80px 20px;
+
+}
+
+}
