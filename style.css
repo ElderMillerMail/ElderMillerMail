@@ -194,6 +194,107 @@ footer h3 {
     font-size: 1.05rem;
 }
 
+/* =====================================
+   THANK YOU PAGE
+===================================== */
+
+.thanks-page{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(47,94,70,.08),
+        rgba(47,94,70,.08)
+    ),
+    url("images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.thanks-card{
+
+    max-width:620px;
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.thanks-icon{
+
+    width:70px;
+
+    margin:0 auto 25px;
+
+}
+
+.thanks-card h1{
+
+    font-family:"Playfair Display", serif;
+
+    color:var(--green);
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.thanks-card p{
+
+    color:#555;
+
+    margin-bottom:18px;
+
+    font-size:1.05rem;
+
+}
+
+.home-button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 36px;
+
+    background:var(--green);
+
+    color:white;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.home-button:hover{
+
+    background:var(--green-dark);
+
+    transform:translateY(-2px);
+
+}
+
 @media (max-width:900px){
 .hero{padding:3rem 5%;align-items:flex-start}
 .signup-card{
