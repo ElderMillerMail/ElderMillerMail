@@ -152,12 +152,37 @@ button:hover{background:var(--green-dark);transform:translateY(-2px)}
   width:140px;
 }
 
-footer{
-  background:var(--green);
-  color:#fff;
-  text-align:center;
-  padding:2.5rem 1rem;
+footer {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
 }
+
+footer h3 {
+    font-family: "Playfair Display", serif;
+    margin-bottom: 1.5rem;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.timeline span {
+    display: block;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.timeline strong {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+}
+
 footer small{display:block;opacity:.8;margin-top:.5rem}
 
 @media (max-width:900px){
