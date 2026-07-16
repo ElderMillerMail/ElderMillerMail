@@ -167,27 +167,32 @@ footer h3 {
 .timeline {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    align-items: stretch;
+    gap: 0;
     flex-wrap: wrap;
 }
 
 .timeline-item {
+    flex: 1;
     min-width: 220px;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.timeline-item:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.25);
 }
 
 .timeline-item span {
     display: block;
     opacity: 0.8;
-    font-size: 0.95rem;
-    margin-bottom: 0.35rem;
+    margin-bottom: .35rem;
 }
 
 .timeline-item strong {
     display: block;
     font-size: 1.05rem;
-    font-weight: 600;
 }
-
 /*footer small{display:block;opacity:.8;margin-top:.5rem} */
 
 @media (max-width:900px){
