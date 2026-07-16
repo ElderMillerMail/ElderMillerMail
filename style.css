@@ -1,729 +1,175 @@
-/* =========================
-   RESET
-========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root{
+  --green:#2f5e46;
+  --green-dark:#234735;
+  --cream:#faf7f2;
+  --white:#fff;
+  --text:#2f2f2f;
+  --muted:#666;
+  --shadow:0 20px 45px rgba(0,0,0,.12);
+  --radius:22px;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-
-    font-family:'Poppins',sans-serif;
-    background:#f8faf7;
-    color:#2d3a2d;
-    line-height:1.6;
-
+  font-family:Poppins,sans-serif;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.6;
 }
+img{display:block;max-width:100%}
+main{overflow:hidden}
 
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero{
-
-background:
-
-linear-gradient(
-rgba(0,0,0,.20),
-rgba(0,0,0,.10)
-),
-
-url(images/hero.jpg);
-
-background-size:cover;
-
-background-position:center;
-
+  position:relative;
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.15)),
+    url("images/hero.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:4rem 7%;
 }
-
-.hero-overlay{
-
-display:grid;
-
-grid-template-columns:
-
-1.2fr
-
-0.8fr;
-
-align-items:center;
-
-gap:60px;
-
+.hero-overlay{width:100%;max-width:1200px;margin:0 auto}
+.hero-content{max-width:600px;color:#fff}
+.hero-content h1{
+  font:700 clamp(3rem,6vw,5.2rem) "Playfair Display",serif;
+  line-height:1.05;
 }
+.flag{display:inline-block;width:42px;vertical-align:middle;margin-left:.5rem}
+.line{width:120px;height:4px;background:#fff;margin:2rem 0}
+.hero-content p{font-size:1.2rem;max-width:500px}
 
-.hero-text{
-
-    flex:1;
-    color:white;
-
-}
-
-.hero-text h1{
-
-    font-family:'Playfair Display',serif;
-    font-size:4rem;
-    line-height:1.1;
-    margin-bottom:25px;
-
-}
-
-.hero-text span{
-
-    color:#d7ffd2;
-    font-style:italic;
-
-}
-
-.divider{
-
-    width:100px;
-    height:3px;
-    background:white;
-    margin-bottom:25px;
-
-}
-
-.hero-text p{
-
-    font-size:1.25rem;
-    max-width:520px;
-
-}
-
-.flag{
-
-width:36px;
-
-margin-left:12px;
-
-vertical-align:middle;
-
-}
-
-/* =========================
-   SIGNUP CARD
-========================= */
-button{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:14px;
-
-}
-
-.button-icon{
-
-width:22px;
-
-filter:brightness(0) invert(1);
-
-}
 .signup-card{
-
-    width:420px;
-
-    background:white;
-
-    padding:45px;
-
-    border-radius:24px;
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,.18);
-
+  position:absolute;
+  right:7%;
+  bottom:-80px;
+  width:min(420px,90vw);
+  background:#fff;
+  border-radius:var(--radius);
+  padding:2rem;
+  box-shadow:var(--shadow);
 }
-
-.mail-icon{
-
-width:70px;
-height:70px;
-
-margin:auto;
-
-margin-bottom:20px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:#eef5ef;
-
-border-radius:50%;
-
+.mail-circle{
+  width:70px;height:70px;border-radius:50%;
+  background:#edf5ef;margin:0 auto 1rem;
+  display:flex;align-items:center;justify-content:center;
 }
-
-.mail-icon img{
-
-width:34px;
-
-}
-
+.mail-circle img{width:34px}
 .signup-card h2{
-
-    text-align:center;
-
-    color:#28513d;
-
-    margin-bottom:10px;
-
-    font-size:2rem;
-
+  text-align:center;
+  font:700 2rem "Playfair Display",serif;
+  color:var(--green);
 }
+.signup-card>p{text-align:center;color:var(--muted);margin:.75rem 0 1.5rem}
 
-.signup-description{
-
-    text-align:center;
-
-    color:#666;
-
-    margin-bottom:30px;
-
+.field{
+  display:flex;align-items:center;
+  border:1px solid #ddd;border-radius:14px;
+  padding:.85rem 1rem;margin-bottom:1rem;
 }
-
-.signup-card form{
-
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-
+.field img{width:20px;opacity:.7;margin-right:.75rem}
+.field input{
+  border:none;outline:none;background:transparent;
+  width:100%;font:inherit;
 }
-
-.signup-card input{
-
-    padding:16px 18px;
-
-    border:1px solid #ddd;
-
-    border-radius:12px;
-
-    font-size:16px;
-
-    transition:.25s;
-
+button{
+  width:100%;border:none;border-radius:14px;
+  background:var(--green);color:#fff;
+  padding:1rem;font:600 1rem Poppins,sans-serif;
+  display:flex;justify-content:center;align-items:center;gap:.75rem;
+  cursor:pointer;transition:.25s;
 }
+button img{width:18px;filter:brightness(0) invert(1)}
+button:hover{background:var(--green-dark);transform:translateY(-2px)}
 
-.signup-card input:focus{
-
-    outline:none;
-
-    border-color:#2f6d4d;
-
-    box-shadow:
-    0 0 8px rgba(47,109,77,.25);
-
-}
-
-.signup-card button{
-
-    margin-top:10px;
-
-    padding:18px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#2f6d4d;
-
-    color:white;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.signup-card button:hover{
-
-    background:#3d8660;
-
-    transform:translateY(-2px);
-
-}
-
-/* =========================
-   BENEFITS
-========================= */
-
+/* BENEFITS */
 .benefits{
-
-    max-width:1200px;
-
-    margin:120px auto;
-
-    padding:0 30px;
-
-    text-align:center;
-
+  padding:10rem 7% 6rem;
+  text-align:center;
 }
-
 .benefits h2{
-
-    font-family:'Playfair Display',serif;
-
-    color:#2f6d4d;
-
-    font-size:2.6rem;
-
-    margin-bottom:60px;
-
+  font:700 2.6rem "Playfair Display",serif;
+  color:var(--green);
+  margin-bottom:3rem;
 }
-
 .benefit-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:50px;
-
+  max-width:1200px;margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
 }
-
 .benefit{
-
-    padding:30px;
-
+  background:#fff;padding:2rem;border-radius:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.06);
+  transition:.25s;
 }
-
+.benefit:hover{transform:translateY(-8px)}
 .icon-circle{
-
-width:90px;
-height:90px;
-
-margin:0 auto 30px;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-background:white;
-
-border-radius:50%;
-
-box-shadow:
-
-0 10px 30px rgba(0,0,0,.08);
-
-transition:.3s;
-
+  width:86px;height:86px;margin:0 auto 1.5rem;
+  border-radius:50%;background:#edf5ef;
+  display:flex;align-items:center;justify-content:center;
 }
+.icon-circle img{width:42px;height:42px}
+.benefit h3{margin-bottom:.75rem;color:var(--green)}
+.benefit p{color:var(--muted)}
 
-.icon-circle img{
-
-width:42px;
-
-height:42px;
-
+/* Mission */
+.mission{
+  max-width:1200px;
+  margin:2rem auto 6rem;
+  padding:0 7%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  align-items:center;
 }
-
-.icon-circle:hover{
-
-transform:translateY(-6px);
-
-box-shadow:
-
-0 18px 35px rgba(0,0,0,.15);
-
-
-.benefit h3{
-
-    margin-bottom:15px;
-
-    color:#28513d;
-
+.map{text-align:center}
+.map img{max-width:360px;margin:auto}
+.scripture-card{
+  position:relative;
+  background:#fff;
+  padding:3rem;
+  border-radius:20px;
+  box-shadow:var(--shadow);
 }
-
-.benefit{
-
-padding:30px;
-
-position:relative;
-
+.scripture-card h2{
+  font:700 2rem "Playfair Display",serif;
+  color:var(--green);
+  margin-bottom:1rem;
 }
-
-.benefit:not(:last-child)::after{
-
-content:"";
-
-position:absolute;
-
-right:0;
-
-top:30px;
-
-height:70%;
-
-width:1px;
-
-background:#ddd;
-
+.scripture-card blockquote{
+  font:500 2rem "Playfair Display",serif;
+  margin-bottom:1rem;
 }
-
-/* =========================
-   MISSION SECTION
-========================= */
-
-.mission-section{
-
-    max-width:1200px;
-
-    margin:100px auto;
-
-    padding:0 30px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    align-items:center;
-
-    gap:80px;
-
-}
-
-.map-side{
-
-    text-align:center;
-
-}
-
-.map-side img{
-
-    max-width:340px;
-
-    margin:auto;
-
-}
-
-.map-side h3{
-
-    margin-top:25px;
-
-    font-size:1.5rem;
-
-    color:#28513d;
-
-}
-
-.map-side span{
-
-    font-size:.9rem;
-
-    color:#666;
-
-}
-
-.quote-side{
-
-    position:relative;
-
-    background:white;
-
-    padding:60px;
-
-    border-radius:20px;
-
-    box-shadow:
-    0 10px 35px rgba(0,0,0,.08);
-
-}
-
-blockquote{
-
-    font-family:'Playfair Display',serif;
-
-    font-size:2rem;
-
-    color:#333;
-
-    margin-bottom:25px;
-
-}
-
-.quote-side p{
-
-    color:#2f6d4d;
-
-    font-weight:600;
-
-}
-
+.scripture-card span{color:var(--muted)}
 .sakura{
-
-    position:absolute;
-
-    width:140px;
-
-    right:-30px;
-
-    bottom:-30px;
-
+  position:absolute;
+  right:-25px;
+  bottom:-25px;
+  width:140px;
 }
-
-/* =========================
-   THANK YOU
-========================= */
-
-.thank-you{
-
-    padding:120px 30px;
-
-    text-align:center;
-
-    background:#eef5ef;
-
-}
-
-.thank-you h2{
-
-    font-size:3rem;
-
-    color:#2f6d4d;
-
-    margin-bottom:10px;
-
-}
-
-.thank-you h3{
-
-    font-weight:500;
-
-    margin-bottom:25px;
-
-}
-
-.thank-you p{
-
-    max-width:650px;
-
-    margin:auto;
-
-    color:#666;
-
-}
-
-/* =========================
-   FOOTER
-========================= */
 
 footer{
-
-    background:#2f6d4d;
-
-    color:white;
-
-    text-align:center;
-
-    padding:30px;
-
+  background:var(--green);
+  color:#fff;
+  text-align:center;
+  padding:2.5rem 1rem;
 }
+footer small{display:block;opacity:.8;margin-top:.5rem}
 
-/* =========================
-   ANIMATIONS
-========================= */
-
+@media (max-width:900px){
+.hero{padding:3rem 5%;align-items:flex-start}
 .signup-card{
-
-    animation:fadeUp 1s ease;
-
+ position:relative;right:auto;bottom:auto;
+ margin:3rem auto 0;
 }
-
-.hero-text{
-
-    animation:fadeLeft 1s ease;
-
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
-}
-
-@keyframes fadeLeft{
-
-    from{
-
-        opacity:0;
-        transform:translateX(-40px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateX(0);
-
-    }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:950px){
-
-.hero-overlay{
-
-    flex-direction:column;
-
-    text-align:center;
-
-}
-
-.hero-text{
-
-    order:1;
-
-}
-
-.signup-card{
-
-    order:2;
-
-    width:100%;
-    max-width:450px;
-
-}
-
-.hero-text h1{
-
-    font-size:3rem;
-
-}
-
-.hero-text p{
-
-    margin:auto;
-
-}
-
-.divider{
-
-    margin:20px auto;
-
-}
-
-.benefit-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.mission-section{
-
-    grid-template-columns:1fr;
-
-}
-
-.quote-side{
-
-background:white;
-
-border:3px solid #d8c9b0;
-
-border-radius:8px;
-
-padding:60px;
-
-position:relative;
-
-box-shadow:
-
-0 10px 35px rgba(0,0,0,.08);
-
-}
-
-blockquote{
-
-    font-size:1.5rem;
-
-}
-
-.sakura{
-
-    display:none;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.hero{
-
-    padding:40px 20px;
-
-}
-
-.hero-text h1{
-
-    font-size:2.3rem;
-
-}
-
-.signup-card{
-
-margin-top:120px;
-
-}
-
-.benefits{
-
-    margin:70px auto;
-
-}
-
-.thank-you{
-
-background:
-
-url(images/pattern.svg),
-
-#eef5ef;
-
-background-size:350px;
-
-}
-
+.hero{display:block}
+.hero-overlay{max-width:none}
+.benefits{padding-top:4rem}
+.benefit-grid,.mission{grid-template-columns:1fr}
+.scripture-card{text-align:center}
+.sakura{display:none}
 }
