@@ -37,37 +37,34 @@ a{
 
 .hero{
 
-    min-height:100vh;
+background:
 
-    background:
-    linear-gradient(
-    rgba(255,255,255,.18),
-    rgba(255,255,255,.25)
-    ),
-    url("images/hero.jpg");
+linear-gradient(
+rgba(0,0,0,.20),
+rgba(0,0,0,.10)
+),
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+url(images/hero.jpg);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+background-size:cover;
 
-    padding:80px 30px;
+background-position:center;
 
 }
 
 .hero-overlay{
 
-    width:100%;
-    max-width:1200px;
+display:grid;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+grid-template-columns:
 
-    gap:80px;
+1.2fr
+
+0.8fr;
+
+align-items:center;
+
+gap:60px;
 
 }
 
@@ -110,10 +107,38 @@ a{
 
 }
 
+.flag{
+
+width:36px;
+
+margin-left:12px;
+
+vertical-align:middle;
+
+}
+
 /* =========================
    SIGNUP CARD
 ========================= */
+button{
 
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:14px;
+
+}
+
+.button-icon{
+
+width:22px;
+
+filter:brightness(0) invert(1);
+
+}
 .signup-card{
 
     width:420px;
@@ -131,11 +156,28 @@ a{
 
 .mail-icon{
 
-    text-align:center;
+width:70px;
+height:70px;
 
-    font-size:34px;
+margin:auto;
 
-    margin-bottom:15px;
+margin-bottom:20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#eef5ef;
+
+border-radius:50%;
+
+}
+
+.mail-icon img{
+
+width:34px;
 
 }
 
@@ -270,13 +312,45 @@ a{
 
 }
 
-.icon{
+.icon-circle{
 
-    font-size:54px;
+width:90px;
+height:90px;
 
-    margin-bottom:20px;
+margin:0 auto 30px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
 
 }
+
+.icon-circle img{
+
+width:42px;
+
+height:42px;
+
+}
+
+.icon-circle:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 18px 35px rgba(0,0,0,.15);
+
 
 .benefit h3{
 
@@ -286,9 +360,29 @@ a{
 
 }
 
-.benefit p{
+.benefit{
 
-    color:#666;
+padding:30px;
+
+position:relative;
+
+}
+
+.benefit:not(:last-child)::after{
+
+content:"";
+
+position:absolute;
+
+right:0;
+
+top:30px;
+
+height:70%;
+
+width:1px;
+
+background:#ddd;
 
 }
 
@@ -564,7 +658,19 @@ footer{
 
 .quote-side{
 
-    padding:40px;
+background:white;
+
+border:3px solid #d8c9b0;
+
+border-radius:8px;
+
+padding:60px;
+
+position:relative;
+
+box-shadow:
+
+0 10px 35px rgba(0,0,0,.08);
 
 }
 
@@ -598,7 +704,7 @@ blockquote{
 
 .signup-card{
 
-    padding:30px;
+margin-top:120px;
 
 }
 
@@ -610,7 +716,13 @@ blockquote{
 
 .thank-you{
 
-    padding:80px 20px;
+background:
+
+url(images/pattern.svg),
+
+#eef5ef;
+
+background-size:350px;
 
 }
 
