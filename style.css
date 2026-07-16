@@ -183,7 +183,7 @@ footer h3 {
     font-size: 1rem;
 }
 
-footer small{display:block;opacity:.8;margin-top:.5rem}
+/*footer small{display:block;opacity:.8;margin-top:.5rem} */
 
 @media (max-width:900px){
 .hero{padding:3rem 5%;align-items:flex-start}
