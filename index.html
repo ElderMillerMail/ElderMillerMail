@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -7,10 +8,16 @@
 
     <title>Follow My Mission to Japan</title>
 
+    <meta name="description"
+        content="Follow my journey serving in the Tokyo Japan South Mission. Receive weekly stories, photos, and spiritual messages.">
+
+    <link rel="icon" href="favicon.ico">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -18,53 +25,76 @@
 
 <body>
 
-<!-- ================= HERO ================= -->
+<main>
 
-<header class="hero">
+<!-- =======================================
+HERO
+======================================= -->
+
+<section class="hero">
 
     <div class="hero-overlay">
 
-        <div class="hero-text">
+        <div class="hero-content">
 
-    <h1>
-        Follow My
-        <br>
-        Mission to
-        <span>Japan</span>
+            <h1>
 
-        <img src="images/japan-flag.svg" class="flag" alt="Japan Flag">
-    </h1>
+                Follow My
+                <br>
+                Mission to Japan
 
-    <div class="divider"></div>
+                <img
+                    src="images/japan-flag.svg"
+                    class="flag"
+                    alt="Japan Flag">
 
-    <p>
-        Weekly stories, photos, and experiences
-        from the Tokyo Japan South Mission.
-    </p>
+            </h1>
 
-</div>
+            <div class="line"></div>
 
-        <!-- ================= MAILCHIMP CARD ================= -->
+            <p>
 
-        <div class="signup-card">
+                Weekly stories, photos, experiences,
+                and spiritual messages from the
+                Tokyo Japan South Mission.
 
-            <div class="mail-icon">
-
-            <img src="images/mail.svg" alt="Mail">
-
-            </div>
-
-            <h2>Stay Connected</h2>
-
-            <p class="signup-description">
-                Sign up to receive weekly emails with mission stories,
-                photos, and spiritual insights.
             </p>
 
-            <form
-                action="https://missionary.us3.list-manage.com/subscribe/post?u=95c877de182e23d0211f5199b&id=7f98137442&f_id=00c032e1f0"
-                method="post"
-                target="_blank">
+        </div>
+
+    </div>
+
+    <!-- ==========================
+    SIGNUP CARD
+    =========================== -->
+
+    <aside class="signup-card">
+
+        <div class="mail-circle">
+
+            <img
+                src="images/mail.svg"
+                alt="Mail">
+
+        </div>
+
+        <h2>Stay Connected</h2>
+
+        <p>
+
+            Receive mission emails directly
+            in your inbox.
+
+        </p>
+
+        <form
+            action="https://missionary.us3.list-manage.com/subscribe/post?u=95c877de182e23d0211f5199b&amp;id=7f98137442&amp;f_id=00c032e1f0"
+            method="post"
+            target="_blank">
+
+            <div class="field">
+
+                <img src="images/user.svg" alt="">
 
                 <input
                     type="text"
@@ -72,11 +102,23 @@
                     placeholder="First Name"
                     required>
 
+            </div>
+
+            <div class="field">
+
+                <img src="images/user.svg" alt="">
+
                 <input
                     type="text"
                     name="LNAME"
                     placeholder="Last Name"
                     required>
+
+            </div>
+
+            <div class="field">
+
+                <img src="images/mail.svg" alt="">
 
                 <input
                     type="email"
@@ -84,36 +126,41 @@
                     placeholder="Email Address"
                     required>
 
-                <!-- Mailchimp Bot Protection -->
-                <div
-                    style="position:absolute;left:-5000px;"
-                    aria-hidden="true">
+            </div>
 
-                    <input
-                        type="text"
-                        name="b_95c877de182e23d0211f5199b_7f98137442"
-                        tabindex="-1"
-                        value="">
+            <!-- Bot Protection -->
 
-                </div>
+            <div
+                style="position:absolute;left:-5000px;"
+                aria-hidden="true">
 
-                <button>
+                <input
+                    type="text"
+                    name="b_95c877de182e23d0211f5199b_7f98137442"
+                    tabindex="-1"
+                    value="">
 
-                    <img src="images/send.svg" class="button-icon" alt="">
+            </div>
 
-                    Join the Journey
+            <button type="submit">
 
-                </button>
+                <img
+                    src="images/send.svg"
+                    alt="">
 
-            </form>
+                Join the Journey
 
-        </div>
+            </button>
 
-    </div>
+        </form>
 
-</header>
+    </aside>
 
-<!-- ================= BENEFITS ================= -->
+</section>
+
+<!-- =======================================
+WHAT YOU'LL RECEIVE
+======================================= -->
 
 <section class="benefits">
 
@@ -121,115 +168,143 @@
 
     <div class="benefit-grid">
 
-        <div class="benefit">
+        <article class="benefit">
 
             <div class="icon-circle">
-            <img src="images/book.svg" alt="">
-            </div>>
+
+                <img
+                    src="images/book.svg"
+                    alt="Book">
+
+            </div>
 
             <h3>Mission Stories</h3>
 
             <p>
-                Experiences from serving,
-                teaching, and sharing the gospel
+
+                Weekly experiences,
+                miracles,
+                and lessons from serving
                 throughout Japan.
+
             </p>
 
-        </div>
+        </article>
 
-        <div class="benefit">
+        <article class="benefit">
 
             <div class="icon-circle">
-            <img src="images/camera.svg" alt="">
-            </div>>
+
+                <img
+                    src="images/camera.svg"
+                    alt="Camera">
+
+            </div>
 
             <h3>Photos</h3>
 
             <p>
-                Pictures from P-days,
-                districts, exchanges,
-                adventures,
-                and unforgettable moments.
+
+                Beautiful photos from P-Day,
+                districts,
+                companions,
+                and daily missionary life.
+
             </p>
 
-        </div>
+        </article>
 
-        <div class="benefit">
+        <article class="benefit">
 
             <div class="icon-circle">
-            <img src="images/heart.svg" alt="">
+
+                <img
+                    src="images/heart.svg"
+                    alt="Heart">
+
             </div>
 
             <h3>Spiritual Messages</h3>
 
             <p>
-                Weekly testimonies,
-                scriptures,
-                and lessons that strengthen faith
-                and bring hope.
+
+                Scriptures,
+                testimonies,
+                and uplifting thoughts
+                every week.
+
             </p>
 
-        </div>
+        </article>
 
     </div>
 
 </section>
 
-<!-- ================= MAP ================= -->
+<!-- =======================================
+MISSION SECTION
+======================================= -->
 
-<section class="mission-section">
+<section class="mission">
 
-    <div class="map-side">
+    <div class="map">
 
-        <img src="images/japan-map.png" alt="Map of Japan">
-
-        <h3>
-            TOKYO<br>
-            <span>JAPAN SOUTH MISSION</span>
-        </h3>
+        <img
+            src="images/map.png"
+            alt="Japan Map">
 
     </div>
 
-    <div class="quote-side">
+    <div class="scripture-card">
+
+        <img
+            src="images/sakura.png"
+            class="sakura"
+            alt="Cherry Blossoms">
+
+        <h2>
+
+            Tokyo Japan South Mission
+
+        </h2>
 
         <blockquote>
 
-            “The field is white already to harvest.”
+            "The field is white already to harvest."
 
         </blockquote>
 
-        <p>Doctrine & Covenants 4:4</p>
+        <span>
 
-        <img src="images/sakura.png" alt="Cherry Blossoms" class="sakura">
+            Doctrine & Covenants 4:4
+
+        </span>
 
     </div>
 
 </section>
 
-<!-- ================= THANK YOU ================= -->
-
-<section class="thank-you">
-
-    <h2>ありがとうございます！</h2>
-
-    <h3>Thank you for supporting my mission!</h3>
-
-    <p>
-        I appreciate your prayers and encouragement.
-        I can't wait to share this incredible journey with you.
-    </p>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
+<!-- =======================================
+FOOTER
+======================================= -->
 
 <footer>
 
     <p>
-        © 2025 • Tokyo Japan South Mission Updates
+
+        Thank you for supporting my mission.
+
     </p>
 
+    <small>
+
+        © 2025 Tokyo Japan South Mission
+
+    </small>
+
 </footer>
+
+</main>
 
 <script src="script.js"></script>
 
