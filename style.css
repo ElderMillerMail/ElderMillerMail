@@ -135,19 +135,8 @@ button:hover{background:var(--green-dark);transform:translateY(-2px)}
 
 /* BENEFITS */
 .benefits{
-    position:relative;
-
-    margin-top:-60px;
-
-    padding:8rem 7% 6rem;
-
-    background:var(--cream);
-
-    border-radius:40px 40px 0 0;
-
+    padding:10rem 7% 6rem;
     text-align:center;
-
-    z-index:5;
 }
 .benefits h2{
   font:700 2.6rem "Playfair Display",serif;
